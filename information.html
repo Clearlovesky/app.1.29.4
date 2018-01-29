@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>干货-文章详情</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/pinglun_style.css">
+  <link rel="stylesheet" href="css/pinglun_comment.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/information.css">
+	<script>
+      document.onreadystatechange=function(){
+          if(document.readyState=='complete'){
+              $('.loading').fadeOut();
+          }
+      }
+  </script>
+</head>
+<body>
+<!-- 网页加载进度条 -->
+   <div class="loading">
+      <div class="pic"></div>
+   </div>
+	<header>
+		<div class="left">
+			<a href="javascript:history.go(-1)"><img src="images/干货切图/ico_back@3x.png" height="16"alt=""></a>
+		</div>
+		<div class="middle">详情</div>
+		<div class="right">
+			<!-- <img src="images/ico_fenxiang@3x.png" height="16"alt=""> -->
+		</div>
+	</header>
+	<!-- 详情页主体部分开始 -->
+	<div class="main clearfix">
+		<!-- 推荐饮食展示信息 -->
+			<!-- <h3>快速减脂需要注意什么</h3>
+		  <h4>作者 : <span>谢霆锋</span></h4>
+		<img class="showImg" src="images/干货切图/6.bmp" alt="">
+		<div class="content"> 对于这</div> -->
+	</div>
+	
+	<!-- 分割线 -->
+	<div class="line"></div>
+
+  <!--评论区域 begin-->
+	<div class="commentAll">
+    <div class="reviewArea clearfix">
+        <textarea class="content comment-input" placeholder="写点什么&hellip;" onkeyup="keyUP(this)"></textarea>
+        <a href="javascript:;" class="plBtn">评论</a>
+    </div>
+    <!--评论区域 end-->
+    <!--回复区域 begin-->
+    <div class="comment-show">
+        <div class="comment-show-con clearfix">
+            <div class="comment-show-con-img pull-left"><img src="images/干货切图/6.bmp" alt=""></div>
+            <div class="comment-show-con-list pull-left clearfix">
+                <div class="pl-text clearfix">
+                    <a href="#" class="comment-size-name">张三 : </a>
+                    <span class="my-pl-con">&nbsp;来啊 造作啊!</span>
+                </div>
+                <div class="date-dz">
+                    <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                    <div class="date-dz-right pull-right comment-pl-block">
+                        <a href="javascript:;" class="removeBlock">删除</a>
+                        <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
+                        <span class="pull-left date-dz-line">|</span>
+                        <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                    </div>
+                </div>
+                <div class="hf-list-con"></div>
+            </div>
+        </div>
+    </div>
+    <!--回复区域 end-->
+  </div>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/template.js"></script>
+	<script type="text/javascript" src="js/jquery.flexText.js"></script>
+	<script src="js/information.js"></script>
+<!-- 推荐饮食展示信息 -->
+  <script id="information" type="text/html">
+      <h3>{{obj.title}}</h3>
+      <h4>作者 : <span>{{obj.writer}}</span></h4>
+    <img class="showImg" src="http://www.mffive.com:8080{{obj.picUrl}}" alt="">
+    <div class="content">{{obj.content}}</div>
+  </script>
+</body>
+</html>
